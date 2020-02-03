@@ -1,0 +1,45 @@
+{
+  "name": "5xtraining",
+  "version": "12.13.1",
+  "description": "5xRuby interview",
+  "repository": "https://github.com/papan01/5xtraining.git",
+  "author": "papan01 <navy90517@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "upgrade": "yarn upgrade",
+    "prod": "yarn run build -- --env.mode production",
+    "dev": "yarn run build -- --env.mode development",
+    "start:prod": "webpack-dev-server --open --env.mode production",
+    "start:dev": "webpack-dev-server --open --env.mode development",
+    "lint": "eslint --ext .js,.jsx ./src",
+    "lint:fix": "yarn run lint -- --fix"
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.3",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
+    "eslint-plugin-react-hooks": "^2.3.0",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.2"
+  }
+}

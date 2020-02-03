@@ -1,0 +1,24 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb",
+        "airbnb/hooks",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react"
+    ],
+    "env": {
+        "browser": true
+    },
+    "settings": {
+        "import/resolver": {
+          "node": {
+            "extensions": [".js", ".jsx"]
+          }
+        },
+        "react": {
+          "version": "detect" 
+        }
+    }
+}
