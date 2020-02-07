@@ -25,6 +25,10 @@
                 "modules": ["node_modules"]
               }
             }
+          },
+          "node": {
+            "paths": ["./src"],
+            "extensions": [".js", ".jsx"]
           }
         },
         "react": {
