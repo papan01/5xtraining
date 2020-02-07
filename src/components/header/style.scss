@@ -1,0 +1,100 @@
+@import "../../layout/style/base/breakpoint";
+
+.overwrite-nav {
+  background-color: #fff;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 20;
+
+  &.navbar {
+    padding: 0rem;
+  }
+
+  img {
+    @include media-breakpoint-down($breakpoint-sm) {
+        max-width: 7.5rem;
+    }
+  }
+
+  .nav-border {
+    -webkit-box-shadow: 0 0 0.3125rem #b0a0ad;
+    box-shadow: 0 0 0.3125rem #b0a0ad;
+  }
+
+  .container-fluid {
+    margin: 0 auto;
+    @include media-breakpoint-up($breakpoint-md) {
+      height: 4.375rem;
+    }
+
+    @include media-breakpoint-between($breakpoint-sm, $breakpoint-md) {
+      height: 4.3125rem;
+    }
+  }
+
+  .navbar-brand {
+    @include media-breakpoint-up($breakpoint-sm) {
+      padding-left: 1rem;
+    }
+  }
+
+  .navbar-toggler {
+    background-color: #d90845;
+    padding: 1rem 1.2rem;
+    border-radius: 0rem;
+    border: none;
+    margin-right: -1rem;
+  }
+
+  .icon-bar {
+    width: 2.1875rem;
+    height: 0.125rem;
+    margin: 0.4375rem 0rem;
+    border-radius: 0.0625rem;
+    background-color: #fff;
+    -webkit-transition: 0.1s all;
+    transition: 0.1s all;
+  }
+
+  .navbar-nav {
+    padding: 0rem;
+
+    .nav-link {
+      position: relative;
+      color: #777;
+      padding: 0.9375rem;
+      line-height: 1.25rem;
+      
+      i {
+        margin-right: 2px;
+      }
+
+      .tag {
+        display: inline-block;
+        background: #cd3151;
+        border-radius: 4px;
+        padding: 2px 5px 1px;
+        margin-left: 5px;
+        word-break: keep-all;
+        font-size: 0.85em;
+        font-weight: 400;
+        color: #fff;
+        -webkit-animation: wobble-ver-left 1.5s infinite both;
+        animation: wobble-ver-left 1.5s infinite both;   
+      }
+
+      &:hover{
+          color: #d90845;
+      }
+
+      &.active {
+        color: green;
+      }
+    }
+
+    @include media-breakpoint-down($breakpoint-sm) {
+      padding: 0.46875rem 0rem;
+    }
+  }
+}

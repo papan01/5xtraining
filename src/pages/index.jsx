@@ -1,0 +1,13 @@
+import Home from './home';
+import IAMCoding from './coding';
+import Astro from './astro';
+import Talks from './talks';
+import Dev from './dev';
+import Training from './training';
+import Space from './space';
+import Posts from './posts';
+import NotFound from './404';
+
+export {
+  Home, IAMCoding, Astro, Talks, Dev, Training, Space, Posts, NotFound,
+};

@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
-import Data from './constants.json';
+import './style.scss';
 
-const HeaderWapper = ({ navList }) => (
+const Header = ({ navList }) => (
   <header className="nav-space">
     <nav className="navbar navbar-expand-lg navbar-expand-md navbar-expand-xl navbar-light overwrite-nav">
       <div className="container-fluid nav-border pl-3 pr-3">
-        <Link to="/"><img src="https://5xruby.tw/assets/images/navbar/logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" /></Link>
+        <Link to="/" className="navbar-brand logo-link"><img src="https://5xruby.tw/assets/images/navbar/logo-c473f739.png" alt="網頁設計前後端課程 | 五倍紅寶石" /></Link>
         <button
           type="button"
-          className="navbar-toggle"
+          className="navbar-toggler"
           data-toggle="collapse"
           data-target="#mobile-dropdown"
           aria-controls="navbarNav"
@@ -24,11 +24,39 @@ const HeaderWapper = ({ navList }) => (
         <div className="collapse navbar-collapse flex-row-reverse" id="mobile-dropdown">
           <ul className="navbar-nav">
             {
-              navList.map((item) => (
-                <li className="nav-item text-center" key={item.url}>
-                  <NavLink to={item.url}>{item.label}</NavLink>
-                </li>
-              ))
+              navList.map((item, index) => {
+                if (index === 0) {
+                  return (
+                    <li className="nav-item text-center" key={item.url}>
+                      <NavLink to={item.url} className="nav-link" activeClassName="active">
+                        <span style={{ fontSize: '1em' }}>
+                          <i className="far fa-gem" />
+                        </span>
+                        {' '}
+                        {item.label}
+                      </NavLink>
+                    </li>
+                  );
+                } if (index === 1) {
+                  return (
+                    <li className="nav-item text-center" key={item.url}>
+                      <NavLink to={item.url} className="nav-link">
+                        <span style={{ fontSize: '1em' }}>
+                          <i className="far fa-compass fa-lg" />
+                        </span>
+                        {' '}
+                        {item.label}
+                        <span className="tag">報名優惠中</span>
+                      </NavLink>
+                    </li>
+                  );
+                }
+                return (
+                  <li className="nav-item text-center" key={item.url}>
+                    <NavLink to={item.url} className="nav-link">{item.label}</NavLink>
+                  </li>
+                );
+              })
             }
           </ul>
         </div>
@@ -37,7 +65,7 @@ const HeaderWapper = ({ navList }) => (
   </header>
 );
 
-HeaderWapper.propTypes = {
+Header.propTypes = {
   navList: PropTypes.arrayOf(PropTypes.shape(
     {
       label: PropTypes.string,
@@ -45,9 +73,5 @@ HeaderWapper.propTypes = {
     },
   )).isRequired,
 };
-
-const Header = () => (
-  <HeaderWapper navList={Data.navList} />
-);
 
 export default Header;

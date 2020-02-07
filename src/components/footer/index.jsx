@@ -1,17 +1,17 @@
-
 import React from 'react';
 import PropTypes from 'prop-types';
 import { NavLink, Link } from 'react-router-dom';
-import Data from './constants.json';
+import ScrollToTop from '../scrollToTop';
+import './style.scss';
 
-const FooterWapper = ({ navList, info }) => (
+const Footer = ({ navList, info }) => (
   <footer className="overwrite-footer light-grey-bg mt-5">
     <div className="container">
       <div className="row">
         <div className="col-12 col-md-3">
-          <NavLink to="/press" className="d-block mb-3 press-img">
+          <Link to="/press" className="d-block mb-3 press-img">
             <img src="https://5xruby.tw/assets/images/footer/press-img-3161693e.png" loading="lazy" title="媒體報導" alt="媒體報導" />
-          </NavLink>
+          </Link>
           <a href="https://www.cakeresume.com/jobs" className="d-block cakeresume press-img">
             <img
               src="https://5xruby.tw/assets/images/footer/cakeresume-8938f367.png"
@@ -42,15 +42,15 @@ const FooterWapper = ({ navList, info }) => (
                     <br />
                     {
                     info.rrssb.map((item) => (
-                      <Link
-                        to={item.url}
+                      <a
+                        href={item.url}
                         key={item.label}
                         target="_blank"
                         rel="noopener noreferrer"
                         aria-label={item.label}
                       >
                         <i className={`media-icon ${item.iconClassName}`} />
-                      </Link>
+                      </a>
                     ))
                     }
                   </div>
@@ -62,8 +62,7 @@ const FooterWapper = ({ navList, info }) => (
                     <br />
                     <p>
                       地址：
-                      {' '}
-                      <Link to={info.address.map} target="_blank">{info.address.location}</Link>
+                      <a href={info.address.map} target="_blank" rel="noopener noreferrer">{info.address.location}</a>
                     </p>
                   </div>
                 </div>
@@ -82,11 +81,12 @@ const FooterWapper = ({ navList, info }) => (
         </div>
       </div>
     </div>
+    <ScrollToTop />
   </footer>
 );
 
 
-FooterWapper.propTypes = {
+Footer.propTypes = {
   navList: PropTypes.arrayOf(PropTypes.shape(
     {
       label: PropTypes.string,
@@ -116,7 +116,5 @@ FooterWapper.propTypes = {
     },
   ).isRequired,
 };
-
-const Footer = () => <FooterWapper navList={Data.navList} info={{ ...Data }} />;
 
 export default Footer;

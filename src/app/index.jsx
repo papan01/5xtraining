@@ -1,22 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Header from '../components/header';
-import Footer from '../components/footer';
-import Home from '../pages/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap';
+import { Route, Switch } from 'react-router-dom';
+import Layout from '../layout';
+import * as Pages from '../pages';
 import '@fortawesome/fontawesome-free/css/all.min.css';
+import withErrorBoundary from '../components/errorBoundary';
+
+const PostsWithErrorBoundary = withErrorBoundary(Pages.Posts);
 
 export default class App extends React.PureComponent {
   render() {
     return (
-      <Router>
-        <Header />
-        <div className="main_content">
-          <Route path="/" exact component={Home} />
-        </div>
-        <Footer />
-      </Router>
+      <Layout>
+        <Switch>
+          <Route path="/" exact component={Pages.Home} />
+          <Route path="/iamcoding" exact component={Pages.IAMCoding} />
+          <Route path="/astro" exact component={Pages.Astro} />
+          <Route path="/talks" exact component={Pages.Talks} />
+          <Route path="/dev" exact component={Pages.Dev} />
+          <Route path="/training" exact component={Pages.Training} />
+          <Route path="/space" exact component={Pages.Space} />
+          <Route path="/posts" exact component={PostsWithErrorBoundary} />
+          <Route component={Pages.NotFound} />
+        </Switch>
+      </Layout>
     );
   }
 }
