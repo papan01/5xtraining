@@ -20,6 +20,7 @@ export default class App extends React.PureComponent {
           <Route path="/training" exact component={Pages.Training} />
           <Route path="/space" exact component={Pages.Space} />
           <Route path="/posts" exact component={PostsWithErrorBoundary} />
+          <Route path="/contacts" exact component={Pages.Contacts} />
           <Route component={Pages.NotFound} />
         </Switch>
       </Layout>
