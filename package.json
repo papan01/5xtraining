@@ -18,13 +18,16 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.0",
+    "add": "^2.0.6",
     "classnames": "^2.2.6",
     "gh-pages": "^2.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-modal": "^3.11.1",
     "react-router-dom": "^5.1.2",
-    "util": "^0.12.1"
+    "util": "^0.12.1",
+    "yarn": "^1.22.0"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
