@@ -38,7 +38,7 @@ module.exports = ({ mode }) => {
       filename: isDev ? '[name].js' : '[name].[chunkhash:8].js',
       chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash:8].chunk.js',
       path: DIST_DIR,
-      publicPath: '/',
+      publicPath: isDev ? '/' : './',
     },
     devServer: {
       historyApiFallback: true,

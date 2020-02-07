@@ -9,7 +9,7 @@ import './style/style.scss';
 
 
 const Layout = ({ children }) => (
-  <Router>
+  <Router basename="/5xtraining">
     <Header navList={HeaderSetting.navList} />
     <div className="main_content">
       {children}
