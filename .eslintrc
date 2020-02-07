@@ -14,7 +14,12 @@
     "env": {
         "browser": true
     },
-    "import/no-unresolved": [2, { "caseSensitive": false }],
+    "rules": {
+      "import/no-unresolved": [
+         2, 
+         { "caseSensitive": false }
+      ]
+   },
     "settings": {
         "import/resolver": {
           "node": {
