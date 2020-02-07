@@ -1,0 +1,32 @@
+{
+    "navList":[
+        {
+            "label":"線上課程",
+            "url":"/iamcoding"
+        },
+        {
+            "label":"ASTRO Camp",
+            "url":"/astro"
+        },
+        {
+            "label":"短期課程",
+            "url":"/talks"
+        },
+        {
+            "label":"專案開發",
+            "url":"/dev"
+        },
+        {
+            "label":"企業代訓",
+            "url":"/training"
+        },
+        {
+            "label":"空間租借",
+            "url":"/space"
+        },
+        {
+            "label":"最新消息",
+            "url":"/posts"
+        }
+    ]
+}

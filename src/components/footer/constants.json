@@ -1,0 +1,69 @@
+{
+    "navList":[
+        {
+            "label":"關於五倍紅寶石",
+            "url":"/about"
+        },
+        {
+            "label":"媒體報導",
+            "url":"/press"
+        },
+        {
+            "label":"團隊成員",
+            "url":"/members"
+        },
+        {
+            "label":"聯絡詢價",
+            "url":"/contacts"
+        },
+        {
+            "label":"常見問題",
+            "url":"/faq"
+        },
+        {
+            "label":"工作機會",
+            "url":"/jobs"
+        },
+        {
+            "label":"開源專案",
+            "url":"https://github.com/5xRuby"
+        },
+        {
+            "label":"隱私權條款",
+            "url":"/privacy-policy"
+        },
+        {
+            "label":"服務條款",
+            "url":"/terms-of-service"
+        }
+    ],
+    "rrssb":[
+        {
+            "label":"facebook",
+            "iconClassName": "fab fa-facebook-f",
+            "url":"https://www.facebook.com/5xruby"
+        },
+        {
+            "label":"twitter",
+            "iconClassName": "fab fa-twitter",
+            "url":"https://twitter.com/5xruby"
+        },
+        {
+            "label":"github",
+            "iconClassName": "fab fa-github",
+            "url":"https://github.com/5xruby"
+        }
+    ],
+    "tel":"02-2331-5247",
+    "openingHours": "Mon - Fri / 09:30 - 22:00",
+    "question":"有任何問題？",
+    "mail":"hi@5xruby.tw",
+    "address": {
+        "location":"10046 台北市中正區衡陽路 7 號 5 樓",
+        "map":"https://goo.gl/lz5v93"
+    },  
+    "copyright":[
+        "© 2014 - 2020 五倍紅寶石股份有限公司 (5XRUBY CO., LTD)",
+        "台北市短期補習班立案 第 7594 號"
+    ]
+}

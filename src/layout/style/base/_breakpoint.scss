@@ -1,0 +1,24 @@
+$breakpoint-xs: 576px !default;
+$breakpoint-sm: 768px !default;
+$breakpoint-md: 992px !default;
+$breakpoint-lg: 1199px !default;
+
+$breakpoints: $breakpoint-xs, $breakpoint-sm, $breakpoint-md, $breakpoint-lg !default;
+
+@mixin media-breakpoint-up($media-query) {
+  @media (min-width: $media-query) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-down($media-query) {
+  @media (max-width: $media-query - 0.02px) {
+    @content;
+  }
+}
+
+@mixin media-breakpoint-between($media-query-low, $media-query-height) {
+  @media (min-width: $media-query-low) and (max-width: $media-query-height - 0.02px) {
+    @content;
+  }
+}

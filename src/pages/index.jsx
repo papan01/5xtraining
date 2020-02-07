@@ -1,10 +1,13 @@
-import React from 'react';
-import { render } from 'react-dom';
+import Home from './home';
+import IAMCoding from './coding';
+import Astro from './astro';
+import Talks from './talks';
+import Dev from './dev';
+import Training from './training';
+import Space from './space';
+import Posts from './posts';
+import NotFound from './404';
 
-export default class Home extends React.PureComponent {
-  render() {
-    return <div>Hello World</div>;
-  }
-}
-
-render(<Home />, document.getElementById('app'));
+export {
+  Home, IAMCoding, Astro, Talks, Dev, Training, Space, Posts, NotFound,
+};

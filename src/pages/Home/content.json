@@ -1,0 +1,143 @@
+{
+    "homeSlides": [
+        {
+            "url":"https://astro.5xruby.tw/",
+            "alt":"轉職前後端軟體工程師課程 | ASTRO | 五倍紅寶石",
+            "img":"https://5xruby.tw/assets/images/index/banner_astro-a839be5c.jpg",
+            "sm":"https://5xruby.tw/assets/images/index/banner_astro/small-0a0f4727.jpg",
+            "md":"https://5xruby.tw/assets/images/index/banner_astro/medium-68da60f6.jpg",
+            "lg":"https://5xruby.tw/assets/images/index/banner_astro/large-a839be5c.jpg"        
+        },
+        {
+            "url":"https://iamcoding.tw/",
+            "alt":"轉職前後端工程師程式線上課程 | 微痛轉職工程師 | 五倍紅寶石",
+            "img":"https://5xruby.tw/assets/images/index/banner_imcodingit-53a9a811.jpg",
+            "sm":"https://5xruby.tw/assets/images/index/banner_imcodingit/small-084bbe8e.jpg",
+            "md":"https://5xruby.tw/assets/images/index/banner_imcodingit/medium-ac7b6c1c.jpg",
+            "lg":"https://5xruby.tw/assets/images/index/banner_imcodingit/large-522226cd.jpg" 
+        },
+        {
+            "url":"https://www.facebook.com/rubymokumokukai/",
+            "alt":"工程師社群默默會 | 工程師交流討論 | 五倍紅寶石",
+            "img":"https://5xruby.tw/assets/images/index/banner_mokumokukai-f9ec6b54.jpg",
+            "sm":"https://5xruby.tw/assets/images/index/banner_mokumokukai/small-55384ddb.jpg",
+            "md":"https://5xruby.tw/assets/images/index/banner_mokumokukai/medium-7e04c28f.jpg",
+            "lg":"https://5xruby.tw/assets/images/index/banner_mokumokukai/large-624d5776.jpg"
+        },
+        {
+            "url":"/about",
+            "alt":"五倍紅寶石網頁開發 | 網頁設計課程以及開發推薦 | 五倍紅寶石",
+            "img":"https://5xruby.tw/assets/images/index/banner_5xruby-3d66d288.jpg",
+            "sm":"https://5xruby.tw/assets/images/index/banner_5xruby/small-f0f041dc.jpg",
+            "md":"https://5xruby.tw/assets/images/index/banner_5xruby/medium-31d58562.jpg",
+            "lg":"https://5xruby.tw/assets/images/index/banner_5xruby/large-8a833869.jpg"
+        }
+    ],
+    "featureSection": {
+        "title": "關於五倍紅寶石 About 5xRuby ",
+        "navList": [
+            {
+                "url":"/talks",
+                "img":"https://5xruby.tw/assets/images/index/feature-list/feature-list-img1-0d20ab19.png",
+                "alt":"網頁設計前後端課程教學 | 五倍紅寶石",
+                "title":"網頁設計",
+                "subTitle":"前後端課程教學",
+                "content":"帶你掌握程式技能轉職工程師，程式課程從入門到進階讓你快速上手，學員好評推薦轉職課程"
+            },
+            {
+                "url":"/showcases",
+                "img":"https://5xruby.tw/assets/images/index/feature-list/feature-list-img2-26e4ca80.png",
+                "alt":"頂尖技術網頁製作、專案開發 | 五倍紅寶石",
+                "title":"頂尖技術",
+                "subTitle":"網頁製作、專案開發",
+                "content":"網站開發到行動裝置 App 工程服務、系統設計開發甚至系統架設，提供專業的建議與頂尖的技術。"
+            },
+            {
+                "url":"/training",
+                "img":"https://5xruby.tw/assets/images/index/feature-list/feature-list-img3-d0a4089e.png",
+                "alt":"資訊軟體技術顧問 | 五倍紅寶石",
+                "title":"資訊軟體開發",
+                "subTitle":"技術顧問",
+                "content":"協助您將現有人力快速打造為 Ruby/Rails 團隊，無須經歷繁瑣的人才招募就有即戰力！"
+            },
+            {
+                "url":"/posts/category/activity/",
+                "img":"https://5xruby.tw/assets/images/index/feature-list/feature-list-img4-13321bf0.png",
+                "alt":"前後端工程師社群經營問 | 默默會 | 五倍紅寶石",
+                "title":"前後端工程師",
+                "subTitle":"社群經營",
+                "content":"Ruby 社群經營、舉辦各類活動，促進 Ruby 社群發展，歡迎前後端"
+            }
+        ]
+    },
+    "recentLecture":{
+        "title":"熱門網頁設計課程推薦",
+        "moreLecture": "看更多網頁課程",
+        "lecturesUrl":"/talks",
+        "navList":[
+            {
+                "url":"/talks/functional",
+                "img":"https://5xruby.tw/assets/images/talks/cover/functional-09be0f61.jpg",
+                "status":[true,true],
+                "title":"工作上用得到的函數式程式設計：從觀念到實務 - 假日班",
+                "lecturer":"蘇泰安 (Taian Su)",
+                "date":"2 月｜假日班"
+            },
+            {
+                "url":"/talks/rwd",
+                "img":"https://5xruby.tw/assets/images/talks/cover/rwd-99b9e59b.jpg",
+                "status":[false,true],
+                "title":"客製化進階 RWD 手機版網頁設計班 - 假日班",
+                "lecturer":"李建杭 (Amos Lee)",
+                "date":"3 月｜假日班"
+            },
+            {
+                "url":"/talks/vue-js",
+                "img":"https://5xruby.tw/assets/images/talks/cover/vue-js-61eaa1c7.jpg",
+                "status":[false,true],
+                "title":"Vue.js 與 Vuex 前端開發實戰課程 - 假日班",
+                "lecturer":"許國政 (Kuro Hsu)",
+                "date":"3 月｜假日班"
+            }
+        ]
+    },
+    "showCases":{
+        "title":"案例作品 Showcase",
+        "moreCases":"...更多案例",
+        "casesUrl":"./showcases",
+        "navList":[
+            {
+                "url":"https://spacenextdoor.com/",
+                "img":"https://5xruby.tw/assets/images/showcases/space_next_door-4dfdfeb6.png",
+                "title":"SpaceNextDoor",
+                "content":"Space Next Door is inspired by the sharing economy in which we hope to encourage people to put up their unused space so that users looking for personal or business storage space have better options, closer to where they need it. We are striving to build a trusted community marketplace for you to list, discover and book the nearest and best space at affordable prices."
+            },
+            {
+                "url":"https://itunes.apple.com/in/app/shopmatic-go/id1174712646?mt=8",
+                "img":"https://5xruby.tw/assets/images/showcases/shopmatic_go-f7b86d46.png",
+                "title":"Shopmatic Go app",
+                "content":"Shopmatic Go is an exciting online platform where you can create a unique and comprehensive online store for your business, in a matter of minutes."
+            },
+            {
+                "url":"https://goshopmatic.com/in/",
+                "img":"https://5xruby.tw/assets/images/showcases/shopmatic-92ff9dcf.jpg",
+                "title":"跨境電子商務 Shopmatic",
+                "content":"Shopmatic manages the entire ecosystem for anyone wanting to sell online. We go the extra mile to ensure that we help you in every step of the process to grow your business online - from developing your own unique webstore, to listing you on marketplaces and social channels, to providing you insights on how to sell online."
+            }
+        ]
+    },
+    "knowAboutUs": {
+        "rrssb":[
+            {
+                "url":"https://www.facebook.com/5xruby",
+                "img":"https://5xruby.tw/assets/images/index/icon/icon-fb-2f24e7a0.png",
+                "alt":"facebook"
+            },
+            {
+                "img":"https://5xruby.tw/assets/images/index/icon/icon-twitter-89f8d087.png",
+                "url":"https://twitter.com/5xruby",
+                "alt":"twitter"
+            }
+        ]
+    }
+}

@@ -12,12 +12,13 @@ module.exports = ({ mode }) => {
   return {
     mode,
     entry: {
-      index: resolvePath(SRC_DIR, 'pages/index.jsx'),
+      index: resolvePath(SRC_DIR, 'index.jsx'),
     },
     plugins: [
       new HtmlWebpackPlugin({
         title: '網頁設計前後端程式教學機構 | 實戰轉職訓練 | 五倍紅寶石',
         filename: 'index.html',
+        favicon: resolvePath(ROOT_DIR, 'static/favicon-16x16-5bb791a3.png'),
         chunks: ['index', 'vendor', 'commons', 'runtime'],
         template: resolvePath(ROOT_DIR, 'templates/index.html'),
         meta: {
@@ -37,6 +38,10 @@ module.exports = ({ mode }) => {
       filename: isDev ? '[name].js' : '[name].[chunkhash:8].js',
       chunkFilename: isDev ? '[name].chunk.js' : '[name].[chunkhash:8].chunk.js',
       path: DIST_DIR,
+      publicPath: '/',
+    },
+    devServer: {
+      historyApiFallback: true,
     },
     module: {
       rules: [

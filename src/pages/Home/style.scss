@@ -1,0 +1,101 @@
+@import "../../layout/style/base/breakpoint";
+
+.overwrite-index {
+  .feature-section,
+  .recent-lecture,
+  .showcases {
+    h3 {
+      font-size: 24px;
+      color: #555;
+      &:first-child::before {
+        left: 50%;
+        margin: 0 0 0 -40px;
+        bottom: 0;
+        content: "";
+        height: 3px;
+        width: 80px;
+        background: #d90845;
+        border-radius: 3px;
+        position: absolute;
+      }
+    }
+  }
+
+  .know-about-us {
+    h3 {
+      font-size: 24px;
+    }
+
+    .text {
+      line-height: 38px;
+      font-size: 18px;
+    }
+  }
+
+  @include media-breakpoint-between($breakpoint-sm, $breakpoint-md) {
+    .lecture-list .pic:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  @include media-breakpoint-between($breakpoint-md, $breakpoint-lg) {
+    .showcases .case:nth-child(n + 3) {
+      display: none;
+    }
+  }
+
+  .feature-section {
+    a:hover {
+      color: #333;
+    }
+  }
+
+  .lecture-wrap {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    color: #666;
+    height: 100%;
+    background-color: #fff;
+
+    .cover {
+      width: 100%;
+    }
+
+    .badge-new-course {
+      margin-right: 0.5em;
+      color: #fff;
+      background-color: #ff8e3b;
+    }
+
+    .badge-apply-course {
+      color: #fff;
+      background-color: #d90845;
+    }
+
+    .badge-course-time {
+      color: #666;
+      background-color: #e6e6e6;
+      font-size: 90%;
+      padding: 7px 10px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    small {
+      color: #999;
+    }
+
+    .lecture-time {
+      border-top: 1px solid #ddd;
+      small {
+        width: 70px;
+      }
+    }
+  }
+
+  .rl-padding {
+    padding: 0px 15px;
+  }
+}

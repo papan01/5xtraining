@@ -1,0 +1,65 @@
+.overwrite-footer {
+  padding: 3.125rem 0rem;
+  bottom: 0rem;
+  width: 100%;
+  font-size: 0.875rem;
+
+  .press-img {
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+    &:hover {
+      -webkit-filter: grayscale(0%);
+      filter: grayscale(0%);
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .cakeresume {
+    font-size: 18px;
+    &:hover span {
+      color: #13ab67 !important;
+    }
+  }
+
+  h5 {
+    font-size: 0.875rem;
+    margin: 0.625rem 1.5625rem 0.625rem 0rem;
+    font-weight: bold;
+    display: inline-block;
+  }
+
+  .media-icon {
+    border: 0.125rem solid #666;
+    border-radius: 50%;
+    font-size: 1.375rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-top: 0.625rem;
+    margin-right: 0.625rem;
+    color: #666;
+
+    &:hover {
+      border: 0.125rem solid #d90845;
+      color: #d90845;
+    }
+
+    &.fa-facebook-f {
+      padding: 8px 12px;
+    }
+
+    &.fa-twitter {
+      padding: 8px;
+    }
+
+    &.fa-github {
+      padding: 7px;
+    }
+  }
+
+  .mail-address {
+    line-height: 1.875rem;
+  }
+}
