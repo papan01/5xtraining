@@ -1,4 +1,4 @@
-import Home from './homes';
+import Home from './home';
 import IAMCoding from './coding';
 import Astro from './astro';
 import Talks from './talks';
