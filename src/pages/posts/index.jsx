@@ -5,6 +5,7 @@ const Posts = () => {
   const [posts, setPosts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [numPages, setNumPages] = useState(0);
+  const [isLoading, setIsLoading] = useState(true);
   const postsPerPage = 4;
 
   useEffect(() => {
@@ -13,11 +14,16 @@ const Posts = () => {
       .then((result) => {
         setPosts(result);
         setNumPages(Math.ceil(result.length / postsPerPage));
+        setIsLoading(false);
       })
       .catch((error) => error);
-  }, []);
+  }, [isLoading]);
 
-  return (
+  return isLoading ? (
+    <div className="container">
+      <h3>Loading...</h3>
+    </div>
+  ) : (
     <div className="posts-category pb-3">
       {
             posts.slice(currentPage - 1, currentPage - 1 + postsPerPage).map((post) => (
