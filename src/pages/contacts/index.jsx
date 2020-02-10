@@ -1,21 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import './style.scss';
 import ReactModal from 'react-modal';
+import UserContext from '../../context';
 
 
 const Contacts = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [modalContent, setModalContent] = useState([]);
-
+  const userContext = useContext(UserContext);
   function submit(e) {
     const formData = new FormData(e.target);
+    const user = {
+      name: formData.get('name'),
+      tel: formData.get('phone'),
+      email: formData.get('email'),
+    };
     setModalContent([
-      `姓名：${formData.get('name')}`,
-      `E-mail：${formData.get('mail')}`,
-      `電話：${formData.get('phone')}`,
-      `主題：${formData.get('type')}`,
+      `姓名：${user.name}`,
+      `E-mail：${user.email}`,
+      `電話：${user.tel}`,
+      `主題：${formData.get('topic')}`,
       `訊息：${formData.get('message')}`,
     ]);
+    userContext.setUser(user);
     e.preventDefault();
     setIsOpen(true);
   }
@@ -87,7 +94,7 @@ const Contacts = () => {
                   style={{ width: '100%', border: '1px solid lightgrey' }}
                   className="formcontrol mb-3 p-2 rounded"
                   type="email"
-                  name="mail"
+                  name="email"
                   placeholder="信箱"
                   required
                 />
@@ -102,7 +109,7 @@ const Contacts = () => {
                 <select
                   style={{ width: '100%', border: '1px solid lightgrey' }}
                   className="form-control mb-3 p-2 rounded"
-                  name="type"
+                  name="topic"
                   required
                 >
                   <option value="" disabled>
