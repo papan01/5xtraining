@@ -30,7 +30,8 @@ function previous(length, current) {
 const Carousel = ({ children, wrapperClass }) => {
   const [current, setCurrent] = useState(0);
   const [prev, setPrev] = useState(0);
-  const [delay, setDelay] = useState(9999999);
+  const [delay, setDelay] = useState(5000);
+  const [isSliding, setIsSliding] = useState(false);
   const [prevClass, setPrevClass] = useState('');
   const [nextClass, setNextClass] = useState('active');
   const { length } = children;
@@ -51,11 +52,11 @@ const Carousel = ({ children, wrapperClass }) => {
   }
 
   function start() {
-    setDelay(9999999);
+    setDelay(5000);
   }
 
-  function slideTo(index) {
-    if (index === current) return;
+  function sliding(index) {
+    setIsSliding(true);
     setCurrent(index);
     setPrev(current);
     if (index < current) {
@@ -68,7 +69,19 @@ const Carousel = ({ children, wrapperClass }) => {
     setTimeout(() => {
       setPrevClass('');
       setNextClass('active');
+      setIsSliding(false);
     }, 600);
+  }
+
+  function slideTo(index) {
+    if (index === current) return;
+    if (isSliding) {
+      setTimeout(() => {
+        sliding(index);
+      }, 300);
+    } else {
+      sliding(index);
+    }
   }
 
   return length > 0 ? (
